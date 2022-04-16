@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV VER=2.11.2 METHOD=chacha20 PASSWORD=ss123456
-ENV TLS_PORT=4433 PORT=8080
+ENV TLS_PORT=443 PORT=8080
 
 RUN apk add --no-cache curl \
   && curl -sL https://github.com/jlzsss/gost-heroku/releases/download/v${VER}/gost-linux-amd64-${VER}.tar.gz | tar zx  \
