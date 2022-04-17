@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV VER=2.11.2 METHOD=chacha20 PASSWORD=ss123456
-ENV TLS_PORT=443 PORT=8080
+ENV TLS_PORT=4433 PORT=8080
 WORKDIR /usr/local/bin/
 
 RUN apk add --no-cache curl \
