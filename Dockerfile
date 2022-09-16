@@ -5,7 +5,7 @@ ENV TLS_PORT=4433 PORT=8080
 WORKDIR /usr/local/bin/
 
 RUN apk add --no-cache curl \
-  && curl -sL https://github.com/jlzsss/gost-heroku/releases/download/v${VER}/gost-linux-amd64-${VER}.gz | gzip -d gost-linux-amd64-${VER}.gz \
+  && curl -sL https://github.com/go-gost/gost/releases/download/v${VER}/gost-linux-amd64-${VER}.gz | gzip -d gost-linux-amd64-${VER}.gz \
   && mv gost-linux-amd64 gost && chmod a+x /usr/local/bin/gost
 
 EXPOSE ${TLS_PORT} $PORT
