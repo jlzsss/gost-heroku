@@ -6,8 +6,8 @@ WORKDIR /usr/local/bin/
 
 RUN apk add --no-cache curl \
   && curl -sL https://github.com/jlzsss/gost-heroku/releases/download/v${VER}/gost-linux-amd64-${VER}.gz \
-  && gunzip /usr/local/bin/gost-linux-amd64-${VER}.gz \
-  && mv gost-linux-amd64-${VER} gost && chmod a+x /usr/local/bin/gost
+  && gunzip -c gost-linux-amd64-${VER}.gz > gost \
+  && chmod a+x /usr/local/bin/gost
 
 EXPOSE ${TLS_PORT} $PORT
 
